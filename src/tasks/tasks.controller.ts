@@ -15,21 +15,21 @@ import { TasksService } from './tasks.service';
 
         @Post('/tasks')
         createTasks() {
-            return 'Tarea creada';
+            return this.tasksService.postTasks();
         }
 
         @Put('/tasks')
         updateTasks() {
-            return 'Tarea actualizada';
+            return this.tasksService.putTasks();
         }
 
         @Delete('/tasks')
         deleteTasks() {
-            return 'Tarea eliminada';
+            return this.tasksService.deleteTasks();
         }
 
         @Patch('/tasks')
         updateTasksStatus() {
-            return 'Actualizando el estado de la tarea';
+            return this.tasksService.patchTasks();
         }
     }
